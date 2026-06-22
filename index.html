@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Weather Service</title>
+    <style>
+        body { background: #000; color: #fff; font-family: -apple-system, sans-serif; margin: 0; padding: 10px; }
+        h2 { font-size: 16px; text-align: center; color: #007aff; margin-bottom: 15px; }
+        .ep-link { 
+            display: block; background: #1c1c1e; padding: 18px; 
+            margin-bottom: 10px; border-radius: 12px; 
+            text-decoration: none; color: #fff; font-size: 14px;
+            font-weight: 600;
+            border: 1px solid #3a3a3c;
+        }
+        .ep-link:active { background: #2c2c2e; }
+        video { width: 100%; border-radius: 8px; display: none; margin-top: 5px; }
+        #back-btn { 
+            display: none; background: #333; color: #eee; 
+            padding: 8px; text-align: center; border-radius: 6px; 
+            margin-bottom: 10px; font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="header">Local Forecast</h2>
+    <div id="back-btn" onclick="showList()">← Back to List</div>
+    <div id="list">
+        <!-- Add your videos here as 'ep1.mp4', 'ep2.mp4', etc. -->
+        <a href="#" class="ep-link" onclick="play('ep1.mp4', 'Episode 1')">Station A-1</a>
+        <a href="#" class="ep-link" onclick="play('ep2.mp4', 'Episode 2')">Station A-2</a>
+        <a href="#" class="ep-link" onclick="play('ep3.mp4', 'Episode 3')">Station A-3</a>
+        <a href="#" class="ep-link" onclick="play('ep4.mp4', 'Episode 4')">Station A-4</a>
+    </div>
+    <video id="v" controls playsinline></video>
+
+    <script>
+        const v = document.getElementById('v');
+        const list = document.getElementById('list');
+        const back = document.getElementById('back-btn');
+        const header = document.getElementById('header');
+
+        function play(src, title) {
+            v.src = src;
+            v.style.display = 'block';
+            list.style.display = 'none';
+            back.style.display = 'block';
+            header.innerText = title;
+            v.play();
+        }
+
+        function showList() {
+            v.pause();
+            v.style.display = 'none';
+            list.style.display = 'block';
+            back.style.display = 'none';
+            header.innerText = 'Local Forecast';
+        }
+    </script>
+</body>
+</html>
