@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Local Forecast</title>
+    <link>https://BrandonLuybenCA.github.io/weather-assets/</link>
+    <language>en-us</language>
+    <itunes:author>Weather Service</itunes:author>
+    <itunes:summary>Regional atmospheric data and visual reports.</itunes:summary>
+    <item>
+      <title>Station A-1: Coastal Update</title>
+      <description>Visual update for the coastal region.</description>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://BrandonLuybenCA.github.io/weather-assets/ep1.mp4" length="5000000" type="video/mp4"/>
+      <itunes:duration>00:02:30</itunes:duration>
+      <guid>station-a1</guid>
+    </item>
+  </channel>
+</rss>
